@@ -3,7 +3,7 @@ get '/sessions/new' do
 end 
 
 post '/sessions' do
-	@user = User.authenticate(params[:user][:email], [:user][:password])
+	@user = User.authenticate(params[:user][:email], params[:user][:password])
 	if @user
 		login
 		redirect "/users/#{@user.id}"

@@ -1,9 +1,8 @@
 helpers do 
 
 	def current_user
-		return nil unless session[:user_id]
-		@current_user ||= User.find(session[:user_id])
-	end 
+		session[:user_id] ? User.find(session[:user_id]) : nil
+	end  
 
 	def login
 		session[:user_id] = @user.id
@@ -11,6 +10,10 @@ helpers do
 
 	def logout
 		session.destroy
+	end 
+
+	def logged_in?
+		current_user ? true : false
 	end 
 
 end 
