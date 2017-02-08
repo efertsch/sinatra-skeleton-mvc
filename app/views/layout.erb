@@ -18,6 +18,23 @@
   <title></title>
 </head>
 <body>
+  <%if current_user%>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/users/<%=current_user.id%>">Profile</a></li>
+        <li><a href="/sessions">Logout</a></li>
+      </ul>
+    </nav> 
+  <%else %>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/users/<%=current_user.id%>">Login</a></li>
+        <li><a href="/users/new">Register</a></li>
+      </ul>
+    </nav> 
+  <%end%>
   <%= yield %>
 </body>
 </html>
