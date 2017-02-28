@@ -42,5 +42,11 @@ li a:hover {
 }
 
 #logout-form:hover {
-    background-color: #111;
+  background-color: #111;
+}
+
+#top-div {
+  position: fixed;
+  color: #8f939b;
+  opacity: 50%;
 }
