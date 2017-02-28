@@ -1,8 +1,8 @@
-get '/sessions/new' do 
+get '/login' do 
 	erb :'sessions/new'
 end 
 
-post '/sessions' do
+post '/login' do
 	@user = User.authenticate(params[:user][:email], params[:user][:password])
 	if @user
 		login
@@ -12,7 +12,7 @@ post '/sessions' do
 	end 
 end 
 
-delete '/sessions' do 
+delete '/logout' do 
 	logout
 	redirect '/'
 end 
