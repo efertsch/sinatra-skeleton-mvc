@@ -46,7 +46,12 @@ li a:hover {
 }
 
 #top-div {
+
+}
+
+#dbc-logo {
   position: fixed;
-  color: #8f939b;
-  opacity: 50%;
+  margin-left: 50px;
+  margin-top: 15px;
+  opacity: 0.2;
 }
